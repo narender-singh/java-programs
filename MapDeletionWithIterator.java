@@ -1,5 +1,5 @@
 import java.util.Map;
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.ConcurrentModificationException;
@@ -8,7 +8,7 @@ class MapDeletionWithIterator
 {
     public static void main(String[] args)
     {
-        Map<String,String> map = new HashMap<String,String>(){
+        Map<String,String> map = new ConcurrentHashMap<String,String>(){
             {
                 put("Narender","Singh");
                 put("Vivek","Verma");
